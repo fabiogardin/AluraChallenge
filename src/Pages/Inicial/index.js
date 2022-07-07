@@ -2,34 +2,33 @@ import Logobranco from '../../assets/Logobranco.png';
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import pets from '../../assets/pets.png';
 import formaBody from '../../assets/formaBody.png';
-import { BiEnvelope, BiHomeAlt } from 'react-icons/bi';
+import IconInicial from '../../Components/link-inicial';
+import IconEmailInicio from '../../Components/link-email0';
+import BotaoLogin from '../../Components/link-login';
+import BotaoCadastro from '../../Components/link-cadastro';
 import {
     Cabecalho,
     FormaBody,
     Container,
-    IconCasa,
-    IconEmail,
     ImgCabecalho,
     ImgLogoBranco,
     Title,
     Body,
     Paragrafo,
     Botoes,
-    Botao,
     ImagemPet,
     Pets,
     Rodape,
     RodapeTxt
  } from '../../styles';
 
-function Inicial(){
+export default function Inicial(){
     return (
         <Cabecalho>
             <FormaBody src={formaBody} />
             <Container>
-                <IconCasa><BiHomeAlt style={{fontSize: '30px', color:'#FFFFFF'}} /></IconCasa>
-                <IconEmail><BiEnvelope style={{fontSize: '30px', color:'#FFFFFF'}} /></IconEmail>
-
+                <IconInicial />
+                <IconEmailInicio />
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />
                 <ImgLogoBranco src={Logobranco} alt='Logo da empresa AdoPet' />
                 <Title>Boas-vindas!</Title>
@@ -40,12 +39,8 @@ function Inicial(){
                 </Paragrafo>
             </Body>
             <Botoes>
-                <Botao href="#">
-                    Já tenho conta
-                </Botao>
-                <Botao href="#">
-                    Quero me cadastrar
-                </Botao>
+                <BotaoLogin />
+                <BotaoCadastro />
             </Botoes>
             <ImagemPet>
                 <Pets src={pets} alt='Imagem de dois pets' />
@@ -59,8 +54,3 @@ function Inicial(){
         </Cabecalho>
     );
 };
-
-export default Inicial;
-
-
-

@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import User from '../../assets/user-foto.png';
-import { BiEnvelope, BiHomeAlt, BiHide, BiShow, BiUserCircle } from 'react-icons/bi';
+import IconCasa from '../../Components/link-casa';
+import IconEmail from '../../Components/link-email';
 import {
     Container,
-    IconCasa,
-    IconEmail,
     ImgCabecalho,
     Title,
     Botoes,
@@ -18,8 +17,8 @@ export default function Mensagem(){
     return(
         <Cabecalho>
             <Container>
-                <IconCasa><BiHomeAlt style={{fontSize: '30px', color:'#FFFFFF'}} /></IconCasa>
-                <IconEmail><BiEnvelope style={{fontSize: '30px', color:'#FFFFFF'}} /></IconEmail>
+                <IconCasa />
+                <IconEmail />
                 <IconUser src={User} alt='Foto do usuário logado' />
 
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />

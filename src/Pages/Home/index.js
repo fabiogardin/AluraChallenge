@@ -9,11 +9,12 @@ import Sid from '../../assets/petSid.png';
 import Sirius from '../../assets/petSirius.png';
 import Yoda from '../../assets/petYoda.png';
 import Zelda from '../../assets/petZelda.png';
-import { BiEnvelope, BiHomeAlt, BiUserCircle, BiMessageDetail } from 'react-icons/bi';
+import IconCasa from '../../Components/link-casa';
+import IconEmail from '../../Components/link-email';
+import IconAccount from '../../Components/link-user';
+import IconContato from '../../Components/link-contato';
 import {
     Container,
-    IconCasa,
-    IconEmail,
     ImgCabecalho,
     Title,
     Rodape,
@@ -24,9 +25,9 @@ export default function Home(){
     return(
         <Cabecalho>
             <Container>
-                <IconCasa><BiHomeAlt style={{fontSize: '30px', color:'#FFFFFF'}} /></IconCasa>
-                <IconEmail><BiEnvelope style={{fontSize: '30px', color:'#FFFFFF'}} /></IconEmail>
-                <IconAccount><BiUserCircle style={{fontSize: '45px', color: '#2FBD99' }} /></IconAccount>
+                <IconCasa />
+                <IconEmail />
+                <IconAccount />
 
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />
                 <TitleCad>Olá! Veja os amigos<br/>disponíveis para adoção!</TitleCad>
@@ -43,7 +44,7 @@ export default function Home(){
                             <br/>
                             <DadosLocal>Rio de Janeiro (RJ)</DadosLocal>
                             <DadosContato>falar com responsável</DadosContato>
-                            <IconContato><BiMessageDetail style={{fontSize: '25px', color: '#2FBD99'}} /></IconContato>
+                            <IconContato />
                         </Lista>
                     </DadosCartao>
                 </Cartao1>
@@ -58,7 +59,7 @@ export default function Home(){
                             <br/>
                             <DadosLocal>Nova Iguaçu (RJ)</DadosLocal>
                             <DadosContato>falar com responsável</DadosContato>
-                            <IconContato><BiMessageDetail style={{fontSize: '25px', color: '#2FBD99'}} /></IconContato>
+                            <IconContato />
                         </Lista>
                     </DadosCartao>
                 </Cartao>
@@ -73,7 +74,7 @@ export default function Home(){
                             <br/>
                             <DadosLocal>Duque de Caxias (RJ)</DadosLocal>
                             <DadosContato>falar com responsável</DadosContato>
-                            <IconContato><BiMessageDetail style={{fontSize: '25px', color: '#2FBD99'}} /></IconContato>
+                            <IconContato />
                         </Lista>
                     </DadosCartao>
                 </Cartao>
@@ -88,7 +89,7 @@ export default function Home(){
                             <br/>
                             <DadosLocal>São Gonçalo (RJ)</DadosLocal>
                             <DadosContato>falar com responsável</DadosContato>
-                            <IconContato><BiMessageDetail style={{fontSize: '25px', color: '#2FBD99'}} /></IconContato>
+                            <IconContato />
                         </Lista>
                     </DadosCartao>
                 </Cartao>
@@ -103,7 +104,7 @@ export default function Home(){
                             <br/>
                             <DadosLocal>Rio de Janeiro (RJ)</DadosLocal>
                             <DadosContato>falar com responsável</DadosContato>
-                            <IconContato><BiMessageDetail style={{fontSize: '25px', color: '#2FBD99'}} /></IconContato>
+                            <IconContato />
                         </Lista>
                     </DadosCartao>
                 </Cartao>
@@ -118,7 +119,7 @@ export default function Home(){
                             <br/>
                             <DadosLocal>Nova Iguaçu (RJ)</DadosLocal>
                             <DadosContato>falar com responsável</DadosContato>
-                            <IconContato><BiMessageDetail style={{fontSize: '25px', color: '#2FBD99'}} /></IconContato>
+                            <IconContato />
                         </Lista>
                     </DadosCartao>
                 </Cartao>
@@ -133,7 +134,7 @@ export default function Home(){
                             <br/>
                             <DadosLocal>Duque de Caxias (RJ)</DadosLocal>
                             <DadosContato>falar com responsável</DadosContato>
-                            <IconContato><BiMessageDetail style={{fontSize: '25px', color: '#2FBD99'}} /></IconContato>
+                            <IconContato />
                         </Lista>
                     </DadosCartao>
                 </Cartao>
@@ -148,7 +149,7 @@ export default function Home(){
                             <br/>
                             <DadosLocal>São Gonçalo (RJ)</DadosLocal>
                             <DadosContato>falar com responsável</DadosContato>
-                            <IconContato><BiMessageDetail style={{fontSize: '25px', color: '#2FBD99'}} /></IconContato>
+                            <IconContato />
                         </Lista>
                     </DadosCartao>
                 </Cartao>
@@ -163,7 +164,7 @@ export default function Home(){
                             <br/>
                             <DadosLocal>Rio de Janeiro (RJ)</DadosLocal>
                             <DadosContato>falar com responsável</DadosContato>
-                            <IconContato><BiMessageDetail style={{fontSize: '25px', color: '#2FBD99'}} /></IconContato>
+                            <IconContato />
                         </Lista>
                     </DadosCartao>
                 </Cartao>
@@ -184,13 +185,6 @@ const Cabecalho = styled.div`
 
 const Body = styled(Container)`
     gap: 24px;
-`;
-
-const IconAccount = styled.a`
-    position: absolute;
-    left: auto;
-    right: 40px;
-    top: 43px;
 `;
 
 const TitleCad = styled(Title)`
@@ -268,11 +262,6 @@ const DadosContato = styled.li`
     margin-top: 10px;
 
     color: #737380;
-`;
-
-const IconContato = styled.i`
-    position: relative;
-    top: -20px;
 `;
 
 const RodapeTxt2 = styled(RodapeTxt)`

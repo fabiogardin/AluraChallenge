@@ -82,27 +82,15 @@ export const Botao = styled.a`
     text-decoration: none;
 `;
 
-export const Pets = styled.img`
-    
-`;
-
-export const IconCasa = styled.a`
-    position: absolute;
-    left: 48px;
-    top: 48px;
-`;
-
-export const IconEmail = styled.a`
-    position: absolute;
-    left: 125px;
-    top: 48px;
-`;
-
 export const ImagemPet = styled.div`
     display: flex;
     align-content: center;
     justify-content: center;
     margin-top: 10px;
+`;
+
+export const Pets = styled.img`
+    
 `;
 
 export const Rodape = styled.footer`

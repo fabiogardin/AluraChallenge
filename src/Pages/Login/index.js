@@ -3,11 +3,11 @@ import formaCabecalho from '../../assets/formaCabecalho.png';
 import LogoAzul from '../../assets/Logoazul.png';
 import Patas from '../../assets/Patas.png';
 import formaBody2 from '../../assets/formaBody2.png'
-import { BiEnvelope, BiHomeAlt, BiHide, BiShow } from 'react-icons/bi';
+import IconEmailInicio from '../../Components/link-email0';
+import IconInicial from '../../Components/link-inicial';
+import { BiHide, BiShow } from 'react-icons/bi';
 import {
     Container,
-    IconCasa,
-    IconEmail,
     ImgCabecalho,
     ImgLogoBranco,
     Title,
@@ -22,8 +22,8 @@ export default function Login(){
         <Cabecalho>
             <FormaBody2 src={formaBody2} />
             <Container>
-                <IconCasa><BiHomeAlt style={{fontSize: '30px', color:'#FFFFFF'}} /></IconCasa>
-                <IconEmail><BiEnvelope style={{fontSize: '30px', color:'#FFFFFF'}} /></IconEmail>
+                <IconInicial />
+                <IconEmailInicio />
 
                 <ImgPatas src={Patas} alt='Patas de pets' />
 
@@ -45,7 +45,7 @@ export default function Login(){
 
             </AllInput>
             <Botoes2>
-                <Botao2 href="#">
+                <Botao2 href='/home'>
                     Entrar
                 </Botao2>
             </Botoes2>
@@ -170,5 +170,5 @@ color: #FC7071;
 `;
 
 const RodapeTxt2 = styled(RodapeTxt)`
-    margin-top: 240px;
+    margin-top: 225px;
 `;

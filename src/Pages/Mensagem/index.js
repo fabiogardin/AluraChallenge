@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import formaCabecalho from '../../assets/formaCabecalho.png';
-import { BiEnvelope, BiHomeAlt, BiHide, BiShow, BiUserCircle } from 'react-icons/bi';
+import IconCasa from '../../Components/link-casa';
+import IconEmail from '../../Components/link-email';
+import IconAccount from '../../Components/link-user';
 import {
     Container,
-    IconCasa,
-    IconEmail,
     ImgCabecalho,
     Title,
     Botoes,
@@ -17,9 +17,9 @@ export default function Mensagem(){
     return(
         <Cabecalho>
             <Container>
-                <IconCasa><BiHomeAlt style={{fontSize: '30px', color:'#FFFFFF'}} /></IconCasa>
-                <IconEmail><BiEnvelope style={{fontSize: '30px', color:'#FFFFFF'}} /></IconEmail>
-                <IconAccount><BiUserCircle style={{fontSize: '45px', color: '#2FBD99' }} /></IconAccount>
+                <IconCasa />
+                <IconEmail />
+                <IconAccount />
 
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />
                 <TitleCad>Envie uma mensagem para a pessoa ou instituição que está cuidado do animal:</TitleCad>
@@ -58,13 +58,6 @@ export default function Mensagem(){
 
 const Cabecalho = styled.div`
     background: #FFFFFF;
-`;
-
-const IconAccount = styled.a`
-    position: absolute;
-    left: auto;
-    right: 40px;
-    top: 43px;
 `;
 
 const TitleCad = styled(Title)`

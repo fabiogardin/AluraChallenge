@@ -3,11 +3,11 @@ import formaCabecalho from '../../assets/formaCabecalho.png';
 import LogoAzul from '../../assets/Logoazul.png';
 import Patas from '../../assets/Patas.png';
 import formaBody2 from '../../assets/formaBody2.png'
-import { BiEnvelope, BiHomeAlt, BiHide, BiShow } from 'react-icons/bi';
+import IconInicial from '../../Components/link-inicial';
+import IconEmailInicio from '../../Components/link-email0';
+import { BiHide, BiShow } from 'react-icons/bi';
 import {
     Container,
-    IconCasa,
-    IconEmail,
     ImgCabecalho,
     ImgLogoBranco,
     Title,
@@ -22,8 +22,8 @@ export default function Cadastro(){
         <Cabecalho>
             <FormaBody2 src={formaBody2} />
             <Container>
-                <IconCasa><BiHomeAlt style={{fontSize: '30px', color:'#FFFFFF'}} /></IconCasa>
-                <IconEmail><BiEnvelope style={{fontSize: '30px', color:'#FFFFFF'}} /></IconEmail>
+                <IconInicial />
+                <IconEmailInicio />
 
                 <ImgPatas src={Patas} alt='Patas de pets' />
 
@@ -52,7 +52,7 @@ export default function Cadastro(){
                 </InputDiv>
             </AllInput>
             <Botoes2>
-                <Botao2 href="#">
+                <Botao2 href='/login'>
                     Cadastrar
                 </Botao2>
             </Botoes2>
@@ -156,6 +156,7 @@ const IconOlho = styled.i`
     z-index: 2;
     left: 35%;
     bottom: 32px;
+    margin-bottom: -32px;
 `;
 
 const Botoes2 = styled(Botoes)`
@@ -167,5 +168,5 @@ const Botao2 = styled(Botao)`
 `;
 
 const RodapeTxt2 = styled(RodapeTxt)`
-    margin-top: 80px;
+    margin-top: 66px;
 `;
