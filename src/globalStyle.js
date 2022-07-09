@@ -7,9 +7,15 @@ export default createGlobalStyle `
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
     font-weight: 400;
+    font-style: normal;
+}
+:root{
+    font-size: 16px;
 
+    @media (min-width: 768px){
+        font-size: 18px;
+    }
 }
 
 `;

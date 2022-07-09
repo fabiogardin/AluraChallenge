@@ -1,17 +1,28 @@
-import styled from 'styled-components';
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import User from '../../assets/user-foto.png';
 import IconCasa from '../../Components/link-casa';
 import IconEmail from '../../Components/link-email';
 import {
+    Cabecalho,
     Container,
+    IconUser,
     ImgCabecalho,
-    Title,
+    TitleCad,
+    AllInput,
+    InputDiv,
+    Input,
+    LabelInput,
+    Perfil,
+    TitlePerfil,
+    FotoNome,
+    FotoUser,
+    EditarFoto,
+    TextArea,
     Botoes,
     Botao,
     Rodape,
     RodapeTxt,
-} from '../../styles';
+} from './styles';
 
 export default function Mensagem(){
     return(
@@ -44,166 +55,17 @@ export default function Mensagem(){
                     <LabelInput for="sobre" >Sobre</LabelInput>
                     <TextArea type="text" id="sobre" rows="7" placeholder='Escreva sua mensagem' required />
                 </InputDiv>
-
-                <Botoes2>
-                    <Botao2 href="#">
+                <Botoes>
+                    <Botao href="#">
                         Salvar
-                    </Botao2>
-                </Botoes2>
+                    </Botao>
+                </Botoes>
             </AllInput>
             <Rodape>
-                <RodapeTxt2>
+                <RodapeTxt>
                     2022 - Desenvolvido por Alura.
-                </RodapeTxt2>
+                </RodapeTxt>
             </Rodape>
-
-        </Cabecalho>
-        
+        </Cabecalho>        
     );
 };
-
-const Cabecalho = styled.div`
-    background: #FFFFFF;
-`;
-
-const IconUser = styled.img`
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: auto;
-    right: 40px;
-    top: 43px;
-`;
-
-const TitleCad = styled(Title)`
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-    color: #3772FF;
-    position: absolute;
-    margin: 145px 50px 0 50px;
-    text-align: center;
-`;
-
-const Perfil = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 24px;
-    gap: 4px;
-`;
-
-const TitlePerfil = styled.h2`    
-    width: 85%;
-    font-weight: 600;
-    font-size: 21px;
-    line-height: 24px;
-    color: #737380;
-    text-align: center;
-`;
-
-const FotoNome = styled.h4`
-    width: 85%;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    color: #3772FF;
-`;
-
-const FotoUser = styled.img`
-    width: 80px;
-    height: 80px;
-`;
-
-const EditarFoto = styled.a`
-    font-size: 12px;
-    line-height: 24px;
-    text-align: center;
-    color: #FC7071;
-`;
-
-const AllInput = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: -40px 24px 24px 24px;
-    background-color: #F6F6F6;
-    border-radius: 10px;
-
-`;
-
-const InputDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 24px;
-    gap: 4px;
-`;
-
-const LabelInput = styled.label`
-    width: 85%;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 8px;
-    color: #3772FF;
-`;
-
-const Input = styled.input`
-    width: 85%;
-    height: 48px;
-    text-align: center;
-    color: #BCBCBC;
-    border: none;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 6px;
-    color: #737380; 
-    margin-bottom : 16px;
-
-    ::placeholder {
-        font-size: 12px;
-        color: #BCBCBC;
-
-    }
-    &:focus {
-        outline: none;
-    }
-`;
-
-const TextArea = styled.textarea`
-    width: 85%;
-    color: #BCBCBC;
-    border: none;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 6px;
-    color: #737380; 
-    margin-bottom : 16px;
-    padding: 8px;
-
-    ::placeholder {
-        font-size: 12px;
-        color: #BCBCBC;
-
-    }
-    &:focus {
-        outline: none;
-    }
-`;
-
-const Botoes2 = styled(Botoes)`
-    margin-top: 8px;
-    margin-bottom: 32px;
-`;
-
-const Botao2 = styled(Botao)`
-    width: 148px;
-`;
-
-const RodapeTxt2 = styled(RodapeTxt)`
-    margin-top: 0px;
-`;

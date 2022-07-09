@@ -4,43 +4,47 @@ import pets from '../../assets/pets.png';
 import formaBody from '../../assets/formaBody.png';
 import IconInicial from '../../Components/link-inicial';
 import IconEmailInicio from '../../Components/link-email0';
-import BotaoLogin from '../../Components/link-login';
-import BotaoCadastro from '../../Components/link-cadastro';
 import {
     Cabecalho,
     FormaBody,
     Container,
     ImgCabecalho,
     ImgLogoBranco,
+    LogoBranco,
+    DivLink,
     Title,
     Body,
     Paragrafo,
     Botoes,
+    Botao,
     ImagemPet,
     Pets,
     Rodape,
-    RodapeTxt
- } from '../../styles';
+    RodapeTxt,
+ } from './styles';
 
 export default function Inicial(){
     return (
         <Cabecalho>
             <FormaBody src={formaBody} />
             <Container>
-                <IconInicial />
-                <IconEmailInicio />
+                <DivLink>
+                    <LogoBranco src={Logobranco} alt='Logo da empresa AdoPet' />
+                    <IconInicial />
+                    <IconEmailInicio />
+                </DivLink>
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />
                 <ImgLogoBranco src={Logobranco} alt='Logo da empresa AdoPet' />
                 <Title>Boas-vindas!</Title>
             </Container>
             <Body>
                 <Paragrafo>
-                Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!
+                <span>Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</span>
                 </Paragrafo>
             </Body>
             <Botoes>
-                <BotaoLogin />
-                <BotaoCadastro />
+                <Botao href='/login' >Já tenho conta</Botao>
+                <Botao href='/cadastro' >Quero me cadastrar</Botao> 
             </Botoes>
             <ImagemPet>
                 <Pets src={pets} alt='Imagem de dois pets' />
@@ -50,7 +54,6 @@ export default function Inicial(){
                     2022 - Desenvolvido por Alura.
                 </RodapeTxt>
             </Rodape>
-
         </Cabecalho>
     );
 };

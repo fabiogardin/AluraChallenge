@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import Dunga from '../../assets/petDunga.png';
 import Amora from '../../assets/petAmora.png';
@@ -14,12 +13,23 @@ import IconEmail from '../../Components/link-email';
 import IconAccount from '../../Components/link-user';
 import IconContato from '../../Components/link-contato';
 import {
+    Cabecalho,
     Container,
     ImgCabecalho,
-    Title,
+    TitleCad,
+    Body,
+    Cartao1,
+    ImgCartao,
+    DadosCartao,
+    TitleCartao,
+    Lista,
+    DadosList,
+    DadosLocal,
+    DadosContato,
+    Cartao,
     Rodape,
     RodapeTxt,
-} from '../../styles';
+} from './styles';
 
 export default function Home(){
     return(
@@ -170,100 +180,10 @@ export default function Home(){
                 </Cartao>
             </Body>            
             <Rodape>
-                <RodapeTxt2>
+                <RodapeTxt>
                     2022 - Desenvolvido por Alura.
-                </RodapeTxt2>
+                </RodapeTxt>
             </Rodape>
-
         </Cabecalho>        
     );
 };
-
-const Cabecalho = styled.div`
-    background: #FFFFFF;
-`;
-
-const Body = styled(Container)`
-    gap: 24px;
-`;
-
-const TitleCad = styled(Title)`
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-
-    color: #3772FF;
-
-    position: absolute;
-    margin: 145px 30px 0 30px;
-    text-align: center;
-`;
-
-const Cartao = styled.div`
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    background: #F7F7F7;
-    align-items: center;
-    padding: 24px;
-`;
-
-const Cartao1 = styled(Cartao)`
-    margin-top: -60px;
-`;
-
-const ImgCartao = styled.img`
-    width: 148px;
-    height: 148px;
-
-`;
-
-const Lista = styled.ul`
-    height: 130px;
-`;
-
-const DadosCartao = styled.div`
-    width: 50%;
-
-`;
-
-const TitleCartao = styled.h4`    
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    padding-bottom: 8px;
-
-    color: #3772FF;
-`;
-
-const DadosList = styled.li`
-    font-size: 14px;
-    line-height: 20px;
-    list-style-type: none;
-
-    color: #737380;
-`;
-
-const DadosLocal = styled.li`
-    font-size: 12px;
-    line-height: 16px;
-    list-style-type: none;
-
-    color: #737380;
-`;
-
-const DadosContato = styled.li`
-    font-size: 10px;
-    line-height: 16px;
-    list-style-type: none;
-    margin-left: 30px;
-    margin-top: 10px;
-
-    color: #737380;
-`;
-
-const RodapeTxt2 = styled(RodapeTxt)`
-    margin-top: 20px;
-`;

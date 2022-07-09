@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import LogoAzul from '../../assets/Logoazul.png';
 import Patas from '../../assets/Patas.png';
@@ -7,15 +6,23 @@ import IconInicial from '../../Components/link-inicial';
 import IconEmailInicio from '../../Components/link-email0';
 import { BiHide, BiShow } from 'react-icons/bi';
 import {
+    Cabecalho,
+    FormaBody2,
     Container,
+    ImgPatas,
     ImgCabecalho,
-    ImgLogoBranco,
-    Title,
+    ImgLogoAzul,
+    TitleCad,
+    AllInput,
+    InputDiv,
+    LabelInput,
+    Input,
     Botoes,
     Botao,
     Rodape,
     RodapeTxt,
-} from '../../styles';
+    IconOlho,
+} from './styles';
 
 export default function Cadastro(){
     return(
@@ -51,122 +58,16 @@ export default function Cadastro(){
                     <IconOlho><BiHide style={{ fontSize: '25px', color:'#999999' }} /></IconOlho>
                 </InputDiv>
             </AllInput>
-            <Botoes2>
-                <Botao2 href='/login'>
+            <Botoes>
+                <Botao href='/login'>
                     Cadastrar
-                </Botao2>
-            </Botoes2>
+                </Botao>
+            </Botoes>
             <Rodape>
-                <RodapeTxt2>
+                <RodapeTxt>
                     2022 - Desenvolvido por Alura.
-                </RodapeTxt2>
+                </RodapeTxt>
             </Rodape>
-
-        </Cabecalho>
-        
+        </Cabecalho>        
     );
 };
-
-const Cabecalho = styled.div`
-    background: #FFFFFF;
-`;
-
-const FormaBody2 = styled.img`
-    position: absolute;
-    width: 84px;
-    height: 415px;
-    top: 368px;
-    left: 0px;
-    right: auto;
-`;
-
-const ImgPatas = styled.img`
-    position: absolute;
-    left: auto;
-    right: 0;
-`;
-
-const ImgLogoAzul = styled(ImgLogoBranco)`
-
-`;
-
-const TitleCad = styled(Title)`
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-
-    color: #3772FF;
-
-    position: absolute;
-    margin: 215px 30px 0 30px;
-    text-align: center;
-`;
-
-const AllInput = styled.div`
-    
-`;
-
-const InputDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 24px;
-    gap: 4px;
-`;
-
-const LabelInput = styled.label`
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    text-align: center;
-
-    color: #737380;
-`;
-
-const Input = styled.input`
-    width: 80%;
-    height: 40px;
-    text-align: center;
-    color: #BCBCBC;
-    border: none;
-    background: #F7F7F7;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 6px;
-    color: #737380;
-    z-index: 1;    
-
-    ::placeholder {
-        font-size: 12px;
-        color: #BCBCBC;
-    }
-    &:focus {
-        outline: none;
-    }
-`;
-
-const IconOlho = styled.i`
-    position: relative;
-    z-index: 2;
-    left: 35%;
-    bottom: 32px;
-    margin-bottom: -32px;
-`;
-
-const Botoes2 = styled(Botoes)`
-    margin-top: 24px;
-`;
-
-const Botao2 = styled(Botao)`
-    width: 148px;
-`;
-
-const RodapeTxt2 = styled(RodapeTxt)`
-    margin-top: 66px;
-`;
