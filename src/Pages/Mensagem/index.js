@@ -1,11 +1,12 @@
 import formaCabecalho from '../../assets/formaCabecalho.png';
-import IconCasa from '../../Components/link-casa';
-import IconEmail from '../../Components/link-email';
 import IconAccount from '../../Components/link-user';
+import Header from '../../Components/header';
+import formaBody from '../../assets/formaBody.png'
 import {
     Cabecalho,
     Container,
     ImgCabecalho,
+    FormaBody,
     TitleCad,
     AllInput,
     InputDiv,
@@ -21,9 +22,9 @@ import {
 export default function Mensagem(){
     return(
         <Cabecalho>
+            <FormaBody src={formaBody} />
             <Container>
-                <IconCasa />
-                <IconEmail />
+                <Header />
                 <IconAccount />
 
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />

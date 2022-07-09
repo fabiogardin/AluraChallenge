@@ -1,13 +1,12 @@
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import LogoAzul from '../../assets/Logoazul.png';
 import Patas from '../../assets/Patas.png';
-import formaBody2 from '../../assets/formaBody2.png'
-import IconEmailInicio from '../../Components/link-email0';
-import IconInicial from '../../Components/link-inicial';
+import formaBody from '../../assets/formaBody.png'
+import Header from '../../Components/header';
 import { BiHide, BiShow } from 'react-icons/bi';
 import {
     Cabecalho,
-    FormaBody2,
+    FormaBody,
     ImgPatas,
     Container,
     ImgCabecalho,
@@ -28,10 +27,9 @@ import {
 export default function Login(){
     return(
         <Cabecalho>
-            <FormaBody2 src={formaBody2} />
+            <FormaBody src={formaBody} />
             <Container>
-                <IconInicial />
-                <IconEmailInicio />
+                <Header />
 
                 <ImgPatas src={Patas} alt='Patas de pets' />
 

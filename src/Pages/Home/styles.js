@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Cabecalho = styled.div`
+    background: #FFFFFF;
+    `;
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -9,31 +13,48 @@ export const Container = styled.div`
 export const ImgCabecalho = styled.img`
     width: 100%;
     height: 273.52px;
-`;
+    z-index: 1;
 
-export const Cabecalho = styled.div`
-    background: #FFFFFF;
-    `;
+    @media (min-width: 768px){
+        position: absolute;
+        left: 0;
+        width: 70%;
+        height: 435px;
+        z-index: 0;
+    }
+`;
 
 export const Body = styled.div`
     display: flex;
+    position: relative;
+    top: -50px;
+    bottom: -20px;
     flex-direction: column;
     align-items: center;
     gap: 24px;
+
+    @media (min-width: 768px){
+        margin: 400px 30px -20px 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+
+    }
 `;
 
 export const TitleCad = styled.h3`
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 21px;
-
     color: #3772FF;
 
     position: absolute;
-    margin: 145px 30px 0 30px;
+    margin: 150px 30px 0 30px;
     text-align: center;
+
+    @media (min-width: 768px){
+        margin: 250px 120px 16px 120px;
+        line-height: 30px;
+    }
 `;
 
 export const Cartao = styled.div`
@@ -43,10 +64,10 @@ export const Cartao = styled.div`
     background: #F7F7F7;
     align-items: center;
     padding: 24px;
-`;
 
-export const Cartao1 = styled(Cartao)`
-    margin-top: -60px;
+    @media (min-width: 768px){
+        width: 48%;
+    }
 `;
 
 export const ImgCartao = styled.img`
@@ -108,14 +129,8 @@ export const Rodape = styled.footer`
 `;
     
 export const RodapeTxt = styled.p`
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
-    margin: 0;
     text-align: center;
     padding: 40px 0 40px 0;
-    margin-top: 20px;
 `;

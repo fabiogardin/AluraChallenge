@@ -13,6 +13,27 @@ export const Container = styled.div`
 export const ImgCabecalho = styled.img`
     width: 100%;
     height: 273.52px;
+
+    @media (min-width: 768px){
+        position: absolute;
+        left: 0;
+        width: 70%;
+        height: 435px;
+    }
+`;
+
+export const FormaBody = styled.img`
+    position: absolute;
+    visibility: hidden;
+
+    @media (min-width: 768px){
+        visibility: visible;
+        width: 120px;
+        height: 664px;
+        top: 210px;
+        right: 0px;
+        left: auto;
+    }
 `;
 
 export const IconUser = styled.img`
@@ -22,16 +43,24 @@ export const IconUser = styled.img`
     left: auto;
     right: 40px;
     top: 43px;
+
+    @media (min-width: 768px){
+        top: 64px;
+    }
 `;
 
 export const TitleCad = styled.h3`
-    font-weight: 400;
-    font-size: 16px;
     line-height: 21px;
     color: #3772FF;
+
     position: absolute;
-    margin: 145px 50px 0 50px;
+    margin: 170px 50px 0 50px;
     text-align: center;
+
+    @media (min-width: 768px){
+        margin: 250px 120px 16px 120px;
+        line-height: 30px;
+    }
 `;
 
 export const Perfil = styled.div`
@@ -42,6 +71,10 @@ export const Perfil = styled.div`
 
     margin-top: 24px;
     gap: 4px;
+
+    @media (min-width: 768px){
+        margin-top: 32px;
+    }
 `;
 
 export const TitlePerfil = styled.h2`    
@@ -76,10 +109,13 @@ export const EditarFoto = styled.a`
 export const AllInput = styled.div`
     display: flex;
     flex-direction: column;
-    margin: -40px 24px 24px 24px;
+    margin: -15px 24px 24px 24px;
     background-color: #F6F6F6;
     border-radius: 10px;
 
+    @media (min-width: 768px){
+        margin: 340px 120px 32px 120px;
+    }
 `;
 
 export const InputDiv = styled.div`
@@ -99,6 +135,10 @@ export const LabelInput = styled.label`
     line-height: 24px;
     margin-bottom: 8px;
     color: #3772FF;
+
+    @media (min-width: 768px){
+        width: 93%;
+    }
 `;
 
 export const Input = styled.input`
@@ -121,6 +161,10 @@ export const Input = styled.input`
     &:focus {
         outline: none;
     }
+
+    @media (min-width: 768px){
+        width: 93%;
+    }
 `;
 
 export const TextArea = styled.textarea`
@@ -141,6 +185,10 @@ export const TextArea = styled.textarea`
     }
     &:focus {
         outline: none;
+    }
+
+    @media (min-width: 768px){
+        width: 93%;
     }
 `;
 
@@ -166,6 +214,11 @@ export const Botao = styled.a`
     padding-top: 10px;
 
     text-decoration: none;
+
+    @media (min-width: 768px){
+        width: 164px;
+        height: 48px;
+    }
 `;
 
 export const Rodape = styled.footer`
@@ -177,10 +230,6 @@ export const Rodape = styled.footer`
 `;
 
 export const RodapeTxt = styled.p`
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
     text-align: center;

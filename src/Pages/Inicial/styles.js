@@ -22,19 +22,6 @@ export const ImgCabecalho = styled.img`
     }
 `;
 
-export const DivLink = styled.div`
-    display: flex;
-    position: absolute;
-    left: 50px;
-    top: 35px;
-    z-index: 1;
-
-    @media (min-width: 768px){
-        left: 50px;
-        top: 64px;
-        z-index: 1;
-    }
-`;
 
 export const LogoBranco = styled.img`
     visibility: hidden;

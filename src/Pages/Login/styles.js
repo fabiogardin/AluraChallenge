@@ -13,44 +13,85 @@ export const Container = styled.div`
 export const ImgCabecalho = styled.img`
     width: 100%;
     height: 273.52px;
+
+    @media (min-width: 768px){
+        position: absolute;
+        left: 0;
+        width: 70%;
+        height: 435px;
+    }
 `;
 
-export const FormaBody2 = styled.img`
+export const LogoBranco = styled.img`
+    visibility: hidden;
+
+    @media (min-width: 768px){
+        visibility: visible;
+        width: 140px;
+        height: 35px;
+    }
+`;
+
+export const FormaBody = styled.img`
     position: absolute;
     width: 84px;
     height: 415px;
     top: 368px;
     left: 0px;
     right: auto;
+    transform: scalex(-1);
+
+    @media (min-width: 768px){
+        transform: scalex(1);
+        width: 120px;
+        height: 664px;
+        top: 210px;
+        right: 0px;
+        left: auto;
+    }
 `;
 
 export const ImgPatas = styled.img`
     position: absolute;
     left: auto;
     right: 0;
+
+    @media (min-width: 768px){
+        width: 200px;
+        height: 280px;
+    }
 `;
 
 export const ImgLogoAzul = styled.img`
     position: absolute;
     margin-top: 160px;
+
+    @media(min-width: 768px){
+        margin-top: 250px;
+        width: 252px;
+        height: 62px;
+    }
 `;
 
 export const TitleCad = styled.h3`
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 21px;
-
     color: #3772FF;
 
     position: absolute;
     margin: 215px 30px 0 30px;
     text-align: center;
+
+    @media (min-width: 768px){
+        margin: 360px 80px 16px 80px;
+        line-height: 30px;
+    }
 `;
 
 export const AllInput = styled.div`
-    
+    @media (min-width: 768px){
+        margin-top: 430px;
+        margin-bottom: 30px;
+    }
 `;
 
 export const InputDiv = styled.div`
@@ -64,14 +105,8 @@ export const InputDiv = styled.div`
 `;
 
 export const LabelInput = styled.label`
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 24px;
-
     text-align: center;
-
     color: #737380;
 `;
 
@@ -94,6 +129,14 @@ export const Input = styled.input`
     &:focus {
         outline: none;
     }
+
+    @media (min-width: 768px){
+        width: 50%;
+        height: 54px;
+        ::placeholder{
+            font-size: 16px;
+        }
+    }
 `;
 
 export const IconOlho = styled.i`
@@ -101,6 +144,11 @@ export const IconOlho = styled.i`
     z-index: 2;
     left: 35%;
     bottom: 32px;
+
+    @media (min-width: 768px){
+        left: 22%;
+        bottom: 34px;
+    }
 `;
 
 export const Botoes = styled.div`
@@ -108,6 +156,10 @@ export const Botoes = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 24px;
+
+    @media (min-width: 768px){
+        margin-top: 5px;
+    }
 `;
 
 export const Botao = styled.a`
@@ -134,6 +186,10 @@ export const BotaoSenha = styled.a`
     display: flex;
     justify-content: center;
     color: #FC7071;
+
+    @media (min-width: 768px){
+        font-size: 16px;
+    }
 `;
 
 export const Rodape = styled.footer`
@@ -145,14 +201,14 @@ export const Rodape = styled.footer`
 `;
 
 export const RodapeTxt = styled.p`
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
     margin: 0;
     text-align: center;
     padding: 40px 0 40px 0;
     margin-top: 225px;
+
+    @media (min-width: 768px){
+        margin-top: 280px;
+    }
 `;

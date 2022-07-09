@@ -2,16 +2,13 @@ import Logobranco from '../../assets/Logobranco.png';
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import pets from '../../assets/pets.png';
 import formaBody from '../../assets/formaBody.png';
-import IconInicial from '../../Components/link-inicial';
-import IconEmailInicio from '../../Components/link-email0';
+import Header from '../../Components/header';
 import {
     Cabecalho,
     FormaBody,
     Container,
     ImgCabecalho,
     ImgLogoBranco,
-    LogoBranco,
-    DivLink,
     Title,
     Body,
     Paragrafo,
@@ -28,11 +25,7 @@ export default function Inicial(){
         <Cabecalho>
             <FormaBody src={formaBody} />
             <Container>
-                <DivLink>
-                    <LogoBranco src={Logobranco} alt='Logo da empresa AdoPet' />
-                    <IconInicial />
-                    <IconEmailInicio />
-                </DivLink>
+                <Header />
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />
                 <ImgLogoBranco src={Logobranco} alt='Logo da empresa AdoPet' />
                 <Title>Boas-vindas!</Title>

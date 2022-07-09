@@ -8,8 +8,7 @@ import Sid from '../../assets/petSid.png';
 import Sirius from '../../assets/petSirius.png';
 import Yoda from '../../assets/petYoda.png';
 import Zelda from '../../assets/petZelda.png';
-import IconCasa from '../../Components/link-casa';
-import IconEmail from '../../Components/link-email';
+import Header from '../../Components/header';
 import IconAccount from '../../Components/link-user';
 import IconContato from '../../Components/link-contato';
 import {
@@ -18,7 +17,6 @@ import {
     ImgCabecalho,
     TitleCad,
     Body,
-    Cartao1,
     ImgCartao,
     DadosCartao,
     TitleCartao,
@@ -35,15 +33,14 @@ export default function Home(){
     return(
         <Cabecalho>
             <Container>
-                <IconCasa />
-                <IconEmail />
+                <Header />
                 <IconAccount />
 
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />
                 <TitleCad>Olá! Veja os amigos<br/>disponíveis para adoção!</TitleCad>
             </Container>
             <Body>
-                <Cartao1>
+                <Cartao>
                     <ImgCartao src={Dunga} alt='Imagem do cachorro Dunga.' />
                     <DadosCartao>
                         <TitleCartao>Dunga</TitleCartao>
@@ -57,7 +54,7 @@ export default function Home(){
                             <IconContato />
                         </Lista>
                     </DadosCartao>
-                </Cartao1>
+                </Cartao>
                 <Cartao>
                     <ImgCartao src={Felicia} alt='Imagem da gata Felicia.' />
                     <DadosCartao>
