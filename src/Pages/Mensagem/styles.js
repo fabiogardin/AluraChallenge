@@ -14,14 +14,14 @@ export const ImgCabecalho = styled.img`
     width: 100%;
     height: 273.52px;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         position: absolute;
         left: 0;
         width: 530px;
         height: 435px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 630px;
         height: 435px;
     }
@@ -31,7 +31,7 @@ export const FormaBody = styled.img`
     position: absolute;
     visibility: hidden;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         visibility: visible;
         width: 120px;
         height: 664px;
@@ -49,12 +49,12 @@ export const TitleCad = styled.h3`
     margin: 170px 50px 0 50px;
     text-align: center;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin: 250px 120px 16px 120px;
         line-height: 30px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin: 170px 33% 16px 33%;
     }
 `;
@@ -66,11 +66,11 @@ export const AllInput = styled.div`
     background-color: #F6F6F6;
     border-radius: 10px;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin: 340px 120px 90px 120px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin: 260px 420px 9px 420px;
     }
 `;
@@ -93,11 +93,11 @@ export const LabelInput = styled.label`
     margin-bottom: 8px;
     color: #3772FF;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         width: 93%;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 88%;
     }
 `;
@@ -123,11 +123,11 @@ export const Input = styled.input`
         outline: none;
     }
     
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         width: 93%;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 88%;
     }
 `;
@@ -152,11 +152,11 @@ export const TextArea = styled.textarea`
         outline: none;
     }
     
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         width: 93%;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 88%;
     }
 `;
@@ -168,7 +168,7 @@ export const Botoes = styled.div`
     margin-top: 8px;
     margin-bottom: 32px;
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin-bottom: 10px;
     }
 `;
@@ -188,12 +188,16 @@ export const Botao = styled.a`
 
     text-decoration: none;
 
-    @media (min-width: 768px){
+    :hover{
+        background-color: #FF9D9E;
+    }
+
+    @media screen and (min-width: 768px){
         width: 164px;
         height: 48px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 174px;
     }
 `;
@@ -202,6 +206,7 @@ export const Rodape = styled.footer`
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
    
     background: #36D6AD;
 `;

@@ -21,7 +21,7 @@ export const ImgCabecalho = styled.img`
         height: 435px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 630px;
         height: 435px;
     }
@@ -29,9 +29,11 @@ export const ImgCabecalho = styled.img`
 
 
 export const LogoBranco = styled.img`
+    width: 140px;
+    height: 35px;
     visibility: hidden;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         visibility: visible;
         width: 140px;
         height: 35px;
@@ -41,15 +43,19 @@ export const LogoBranco = styled.img`
 export const ImgLogoBranco = styled.img`
     position: absolute;
     margin-top: 160px;
+    width: 187px;
+    height: 46px;
 
-    @media(min-width: 768px){
+    @media screen and (min-width: 768px){
         margin-top: 250px;
         width: 252px;
         height: 62px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin-top: 140px;
+        width: 252px;
+        height: 62px;
     }
 `;
 
@@ -64,12 +70,12 @@ export const Title = styled.h3`
     position: absolute;
     margin-top: 230px;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin-top: 340px;
         font-size: 28px;        
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin-top: 240px;
     }
 `;
@@ -80,7 +86,7 @@ export const Paragrafo = styled.p`
     margin: 16px 86px;
     text-align: center;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         span{
             display: none;
         }
@@ -91,7 +97,7 @@ export const Paragrafo = styled.p`
         margin: 16px 33% 16px 33%;
     }
     
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 100%;
         margin: -80px 33% 16px 33%;
     }
@@ -101,7 +107,7 @@ export const Body = styled.div`
     display: flex;
     width: 100%;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin-top: 400px;
     }
 `;
@@ -114,7 +120,7 @@ export const FormaBody = styled.img`
     left: auto;
     right: 0px;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         width: 120px;
         height: 664px;
         top: 210px;
@@ -126,11 +132,11 @@ export const Botoes = styled.div`
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin-top: 30px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin-top: 0px;
     }
 `;
@@ -150,12 +156,16 @@ export const Botao = styled.a`
 
     text-decoration: none;
 
-    @media (min-width: 768px){
+    :hover{
+        background-color: #FF9D9E;
+    }
+
+    @media screen and (min-width: 768px){
         width: 344px;
         height: 48px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 362px;
     }
 `;
@@ -168,13 +178,13 @@ export const ImagemPet = styled.div`
 `;
 
 export const Pets = styled.img`
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         width: 278px;
         height: 365px;
         margin-top: 30px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 284px;
         height: 380px;
     }
@@ -184,6 +194,7 @@ export const Rodape = styled.footer`
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom:-20px;
    
     background: #36D6AD;
 `;
@@ -192,16 +203,16 @@ export const RodapeTxt = styled.p`
     line-height: 24px;
     color: #FFFFFF;
 
-    margin: 16px 86px;
+    margin: 16px 70px;
     text-align: center;
     padding: 40px 0 40px 0;
     margin-top: -20px;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin-bottom: 0px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin-top: -22px;
     }
 `;

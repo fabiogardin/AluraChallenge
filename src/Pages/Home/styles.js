@@ -15,7 +15,7 @@ export const ImgCabecalho = styled.img`
     height: 273.52px;
     z-index: 1;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         position: absolute;
         left: 0;
         width: 70%;
@@ -23,7 +23,7 @@ export const ImgCabecalho = styled.img`
         z-index: 0;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 630px;
         height: 435px;
     }
@@ -33,7 +33,7 @@ export const FormaBody = styled.img`
     position: absolute;
     visibility: hidden;
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         visibility: visible;
         width: 120px;
         height: 664px;
@@ -60,7 +60,7 @@ export const Body = styled.div`
         gap: 16px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin: 310px 160px 8px 160px;
     }
 `;
@@ -73,12 +73,12 @@ export const TitleCad = styled.h3`
     margin: 150px 15% 0 15%;
     text-align: center;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin: 250px 120px 16px 120px;
         line-height: 30px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin: 200px 33% 16px 33%;
     }
 `;
@@ -91,11 +91,11 @@ export const Cartao = styled.div`
     align-items: center;
     padding: 24px;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         width: 48%;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 32%;
         padding: 16px 24px;
     }
@@ -155,6 +155,7 @@ export const Rodape = styled.footer`
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
        
     background: #36D6AD;
 `;

@@ -33,6 +33,8 @@ export const DivLink = styled.div`
 `;
 
 export const LogoBranco = styled.img`
+    width: 187px;
+    height: 46px;
     visibility: hidden;
 
     @media (min-width: 768px){

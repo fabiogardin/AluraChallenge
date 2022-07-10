@@ -34,7 +34,7 @@ export default function Mensagem(){
                 <IconUser src={User} alt='Foto do usuário logado' />
 
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />
-                <TitleCad>Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.:</TitleCad>
+                <TitleCad>Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem:</TitleCad>
             </Container>
             <AllInput>
                 <Perfil>

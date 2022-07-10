@@ -14,23 +14,25 @@ export const ImgCabecalho = styled.img`
     width: 100%;
     height: 273.52px;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         position: absolute;
         left: 0;
         width: 530px;
         height: 435px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 630px;
         height: 435px;
     }
 `;
 
 export const LogoBranco = styled.img`
+    width: 140px;
+    height: 35px;
     visibility: hidden;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         visibility: visible;
         width: 140px;
         height: 35px;
@@ -46,7 +48,7 @@ export const FormaBody = styled.img`
     right: auto;
     transform: scalex(-1);
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         transform: scalex(1);
         width: 120px;
         height: 664px;
@@ -61,12 +63,12 @@ export const ImgPatas = styled.img`
     left: auto;
     right: 0;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         width: 200px;
         height: 280px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         width: 270px;
         height: 380px;
         /*transform: rotate(-15deg);
@@ -76,16 +78,18 @@ export const ImgPatas = styled.img`
 `;
 
 export const ImgLogoAzul = styled.img`
+    width: 187px;
+    height: 46px;
     position: absolute;
     margin-top: 140px;
 
-    @media(min-width: 768px){
+    @media screen and (min-width: 768px){
         margin-top: 250px;
         width: 252px;
         height: 62px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin-top: 140px;
     }
 `;
@@ -98,22 +102,22 @@ export const TitleCad = styled.h3`
     margin: 200px 20px 0 25px;
     text-align: center;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin: 360px 100px 16px 100px;
         line-height: 30px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin: 234px 33% 16px 33%;
     }
 `;
 
 export const AllInput = styled.div`
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin-top: 500px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin-top: 375px;
     }
 `;
@@ -154,7 +158,7 @@ export const Input = styled.input`
         outline: none;
     }
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         width: 50%;
         height: 54px;
         ::placeholder{
@@ -162,8 +166,8 @@ export const Input = styled.input`
         }
     }
 
-    @media (min-width: 1440px){
-        width: 35%;
+    @media screen and (min-width: 1440px){
+        width: ${props => props.primary ? '23%' : '35%'} ;
     }
 `;
 
@@ -174,12 +178,16 @@ export const IconOlho = styled.i`
     bottom: 32px;
     margin-bottom: -32px;
 
-    @media (min-width: 768px){
-        left: 22%;
-        bottom: 34px;
+    :hover{
+        cursor: pointer;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 768px){
+        left: 22%;
+        bottom: 42px;
+    }
+
+    @media screen and (min-width: 1440px){
         left: 10%;
         bottom: 42px;
     }
@@ -207,7 +215,11 @@ export const Botao = styled.a`
 
     text-decoration: none;
 
-    @media (min-width: 1440px){
+    :hover{
+        background-color: #FF9D9E;
+    }
+
+    @media screen and (min-width: 1440px){
         width: 174px;
     }
 `;
@@ -223,16 +235,16 @@ export const Rodape = styled.footer`
 export const RodapeTxt = styled.p`
     line-height: 24px;
     color: #FFFFFF;
-    margin: 0;
     text-align: center;
     padding: 40px 0 40px 0;
     margin-top: 66px;
+    margin-bottom: 0;
 
-    @media (min-width: 768px){
+    @media screen and (min-width: 768px){
         margin-top: 35px;
     }
 
-    @media (min-width: 1440px){
+    @media screen and (min-width: 1440px){
         margin-top: 54px;
     }
 `;
