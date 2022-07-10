@@ -20,6 +20,10 @@ const Link = styled.a`
     @media (min-width: 768px){
         top: 64px;
     }
+
+    @media (min-width: 1440px){
+        right: 172px;
+    }
 `;
 
 const BiUser = {

@@ -47,12 +47,12 @@ export default function Cadastro(){
                 </InputDiv>
                 <InputDiv>
                     <LabelInput for="senha" >Senha</LabelInput>
-                    <Input type="password" id="senha" placeholder='Crie uma senha' required />
+                    <Input style={{width: '23%'}} type="password" id="senha" placeholder='Crie uma senha' required />
                     <IconOlho><BiHide style={{ fontSize: '25px', color:'#999999' }} /></IconOlho>
                 </InputDiv>
                 <InputDiv>
                     <LabelInput for="senha" >Confirme sua senha</LabelInput>
-                    <Input type="password" id="senha" placeholder='Repita a senha criada acima' required />
+                    <Input style={{width: '23%'}} type="password" id="senha" placeholder='Repita a senha criada acima' required />
                     <IconOlho><BiHide style={{ fontSize: '25px', color:'#999999' }} /></IconOlho>
                 </InputDiv>
             </AllInput>

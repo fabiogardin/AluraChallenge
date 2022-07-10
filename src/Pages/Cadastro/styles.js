@@ -17,7 +17,12 @@ export const ImgCabecalho = styled.img`
     @media (min-width: 768px){
         position: absolute;
         left: 0;
-        width: 70%;
+        width: 530px;
+        height: 435px;
+    }
+
+    @media (min-width: 1440px){
+        width: 630px;
         height: 435px;
     }
 `;
@@ -60,6 +65,14 @@ export const ImgPatas = styled.img`
         width: 200px;
         height: 280px;
     }
+
+    @media (min-width: 1440px){
+        width: 270px;
+        height: 380px;
+        /*transform: rotate(-15deg);
+        top: -35px;
+        right: -35px;*/
+    }
 `;
 
 export const ImgLogoAzul = styled.img`
@@ -70,6 +83,10 @@ export const ImgLogoAzul = styled.img`
         margin-top: 250px;
         width: 252px;
         height: 62px;
+    }
+
+    @media (min-width: 1440px){
+        margin-top: 140px;
     }
 `;
 
@@ -85,11 +102,19 @@ export const TitleCad = styled.h3`
         margin: 360px 100px 16px 100px;
         line-height: 30px;
     }
+
+    @media (min-width: 1440px){
+        margin: 234px 33% 16px 33%;
+    }
 `;
 
 export const AllInput = styled.div`
     @media (min-width: 768px){
         margin-top: 500px;
+    }
+
+    @media (min-width: 1440px){
+        margin-top: 375px;
     }
 `;
 
@@ -136,6 +161,10 @@ export const Input = styled.input`
             font-size: 16px;
         }
     }
+
+    @media (min-width: 1440px){
+        width: 35%;
+    }
 `;
 
 export const IconOlho = styled.i`
@@ -149,6 +178,11 @@ export const IconOlho = styled.i`
         left: 22%;
         bottom: 34px;
     }
+
+    @media (min-width: 1440px){
+        left: 10%;
+        bottom: 42px;
+    }
 `;
 
 export const Botoes = styled.div`
@@ -156,7 +190,6 @@ export const Botoes = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 24px;
-
 `;
 
 export const Botao = styled.a`
@@ -173,6 +206,10 @@ export const Botao = styled.a`
     padding-top: 10px;
 
     text-decoration: none;
+
+    @media (min-width: 1440px){
+        width: 174px;
+    }
 `;
 
 export const Rodape = styled.footer`
@@ -193,5 +230,9 @@ export const RodapeTxt = styled.p`
 
     @media (min-width: 768px){
         margin-top: 35px;
+    }
+
+    @media (min-width: 1440px){
+        margin-top: 54px;
     }
 `;

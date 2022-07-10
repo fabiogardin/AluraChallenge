@@ -16,6 +16,10 @@ const Link = styled.a`
     @media (min-width: 768px){
         left: 290px;
     }
+
+    @media (min-width: 1440px){
+        left: 255px;
+    }
 `;
 
 const BiEnv = {

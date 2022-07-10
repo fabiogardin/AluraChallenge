@@ -17,7 +17,12 @@ export const ImgCabecalho = styled.img`
     @media (min-width: 768px){
         position: absolute;
         left: 0;
-        width: 70%;
+        width: 530px;
+        height: 435px;
+    }
+
+    @media (min-width: 1440px){
+        width: 630px;
         height: 435px;
     }
 `;
@@ -47,6 +52,10 @@ export const IconUser = styled.img`
     @media (min-width: 768px){
         top: 64px;
     }
+
+    @media (min-width: 1440px){
+        right: 172px;
+    }
 `;
 
 export const TitleCad = styled.h3`
@@ -60,6 +69,10 @@ export const TitleCad = styled.h3`
     @media (min-width: 768px){
         margin: 250px 120px 16px 120px;
         line-height: 30px;
+    }
+
+    @media (min-width: 1440px){
+        margin: 190px 33% 16px 33%;
     }
 `;
 
@@ -116,6 +129,10 @@ export const AllInput = styled.div`
     @media (min-width: 768px){
         margin: 340px 120px 32px 120px;
     }
+
+    @media (min-width: 1440px){
+        margin: 290px 420px 32px 420px;
+    }
 `;
 
 export const InputDiv = styled.div`
@@ -138,6 +155,10 @@ export const LabelInput = styled.label`
 
     @media (min-width: 768px){
         width: 93%;
+    }
+
+    @media (min-width: 1440px){
+        width: 88%;
     }
 `;
 
@@ -165,6 +186,10 @@ export const Input = styled.input`
     @media (min-width: 768px){
         width: 93%;
     }
+
+    @media (min-width: 1440px){
+        width: 88%;
+    }
 `;
 
 export const TextArea = styled.textarea`
@@ -189,6 +214,10 @@ export const TextArea = styled.textarea`
 
     @media (min-width: 768px){
         width: 93%;
+    }
+
+    @media (min-width: 1440px){
+        width: 88%;
     }
 `;
 
@@ -218,6 +247,10 @@ export const Botao = styled.a`
     @media (min-width: 768px){
         width: 164px;
         height: 48px;
+    }
+
+    @media (min-width: 1440px){
+        width: 174px;
     }
 `;
 

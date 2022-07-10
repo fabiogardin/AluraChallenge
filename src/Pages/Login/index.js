@@ -44,7 +44,7 @@ export default function Login(){
                 </InputDiv>
                 <InputDiv>
                     <LabelInput for="senha" >Senha</LabelInput>
-                    <Input type="password" id="senha" placeholder='Crie uma senha' required />
+                    <Input style={{width: '23%'}} type="password" id="senha" placeholder='Digite sua senha' required />
                     <IconOlho><BiHide style={{ fontSize: '25px' }} color='#999999' /></IconOlho>
                 </InputDiv>
                 <BotaoSenha href='#'>Esqueci minha senha.</BotaoSenha>

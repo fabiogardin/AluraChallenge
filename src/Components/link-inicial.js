@@ -16,6 +16,10 @@ const Link = styled.a`
     @media (min-width: 768px){
         left: 205px;
     }
+
+    @media (min-width: 1440px){
+        left: 190px;
+    }
 `;
 
 const BiHome = {

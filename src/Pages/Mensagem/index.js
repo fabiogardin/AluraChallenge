@@ -20,6 +20,7 @@ import {
 } from './styles';
 
 export default function Mensagem(){
+
     return(
         <Cabecalho>
             <FormaBody src={formaBody} />

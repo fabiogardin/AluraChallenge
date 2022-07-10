@@ -17,7 +17,12 @@ export const ImgCabecalho = styled.img`
     @media (min-width: 768px){
         position: absolute;
         left: 0;
-        width: 70%;
+        width: 530px;
+        height: 435px;
+    }
+
+    @media (min-width: 1440px){
+        width: 630px;
         height: 435px;
     }
 `;
@@ -42,6 +47,10 @@ export const ImgLogoBranco = styled.img`
         width: 252px;
         height: 62px;
     }
+
+    @media (min-width: 1440px){
+        margin-top: 140px;
+    }
 `;
 
 export const Title = styled.h3`
@@ -57,8 +66,11 @@ export const Title = styled.h3`
 
     @media (min-width: 768px){
         margin-top: 340px;
-        font-size: 28px;
-        
+        font-size: 28px;        
+    }
+
+    @media (min-width: 1440px){
+        margin-top: 240px;
     }
 `;
 
@@ -75,7 +87,13 @@ export const Paragrafo = styled.p`
         :after{
         content: "Adotar pode mudar uma vida. Que tal buscar seu novo melhor amigo hoje? Vem com a gente!"
         }
-        margin: 16px 210px;
+        width: 100%;
+        margin: 16px 33% 16px 33%;
+    }
+    
+    @media (min-width: 1440px){
+        width: 100%;
+        margin: -80px 33% 16px 33%;
     }
 `;
 
@@ -111,6 +129,10 @@ export const Botoes = styled.div`
     @media (min-width: 768px){
         margin-top: 30px;
     }
+
+    @media (min-width: 1440px){
+        margin-top: 0px;
+    }
 `;
 
 export const Botao = styled.a`
@@ -132,6 +154,10 @@ export const Botao = styled.a`
         width: 344px;
         height: 48px;
     }
+
+    @media (min-width: 1440px){
+        width: 362px;
+    }
 `;
 
 export const ImagemPet = styled.div`
@@ -144,8 +170,13 @@ export const ImagemPet = styled.div`
 export const Pets = styled.img`
     @media (min-width: 768px){
         width: 278px;
-        height: 307px;
+        height: 365px;
         margin-top: 30px;
+    }
+
+    @media (min-width: 1440px){
+        width: 284px;
+        height: 380px;
     }
 `;
 
@@ -168,5 +199,9 @@ export const RodapeTxt = styled.p`
 
     @media (min-width: 768px){
         margin-bottom: 0px;
+    }
+
+    @media (min-width: 1440px){
+        margin-top: -22px;
     }
 `;

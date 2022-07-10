@@ -8,6 +8,7 @@ import Sid from '../../assets/petSid.png';
 import Sirius from '../../assets/petSirius.png';
 import Yoda from '../../assets/petYoda.png';
 import Zelda from '../../assets/petZelda.png';
+import formaBody from '../../assets/formaBody.png'
 import Header from '../../Components/header';
 import IconAccount from '../../Components/link-user';
 import IconContato from '../../Components/link-contato';
@@ -15,6 +16,7 @@ import {
     Cabecalho,
     Container,
     ImgCabecalho,
+    FormaBody,
     TitleCad,
     Body,
     ImgCartao,
@@ -32,12 +34,13 @@ import {
 export default function Home(){
     return(
         <Cabecalho>
+            <FormaBody src={formaBody} />
             <Container>
                 <Header />
                 <IconAccount />
 
                 <ImgCabecalho src={formaCabecalho} alt='Forma geométrica para layout' />
-                <TitleCad>Olá! Veja os amigos<br/>disponíveis para adoção!</TitleCad>
+                <TitleCad>Olá! Veja os amigos disponíveis para adoção!</TitleCad>
             </Container>
             <Body>
                 <Cartao>

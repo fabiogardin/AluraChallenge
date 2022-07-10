@@ -17,7 +17,12 @@ export const ImgCabecalho = styled.img`
     @media (min-width: 768px){
         position: absolute;
         left: 0;
-        width: 70%;
+        width: 530px;
+        height: 435px;
+    }
+
+    @media (min-width: 1440px){
+        width: 630px;
         height: 435px;
     }
 `;
@@ -48,6 +53,10 @@ export const TitleCad = styled.h3`
         margin: 250px 120px 16px 120px;
         line-height: 30px;
     }
+
+    @media (min-width: 1440px){
+        margin: 170px 33% 16px 33%;
+    }
 `;
 
 export const AllInput = styled.div`
@@ -59,6 +68,10 @@ export const AllInput = styled.div`
 
     @media (min-width: 768px){
         margin: 340px 120px 90px 120px;
+    }
+
+    @media (min-width: 1440px){
+        margin: 260px 420px 9px 420px;
     }
 `;
 
@@ -82,6 +95,10 @@ export const LabelInput = styled.label`
 
     @media (min-width: 768px){
         width: 93%;
+    }
+
+    @media (min-width: 1440px){
+        width: 88%;
     }
 `;
 
@@ -109,6 +126,10 @@ export const Input = styled.input`
     @media (min-width: 768px){
         width: 93%;
     }
+
+    @media (min-width: 1440px){
+        width: 88%;
+    }
 `;
 
 export const TextArea = styled.textarea`
@@ -134,6 +155,10 @@ export const TextArea = styled.textarea`
     @media (min-width: 768px){
         width: 93%;
     }
+
+    @media (min-width: 1440px){
+        width: 88%;
+    }
 `;
 
 export const Botoes = styled.div`
@@ -142,6 +167,10 @@ export const Botoes = styled.div`
     align-items: center;
     margin-top: 8px;
     margin-bottom: 32px;
+
+    @media (min-width: 1440px){
+        margin-bottom: 10px;
+    }
 `;
 
 export const Botao = styled.a`
@@ -162,6 +191,10 @@ export const Botao = styled.a`
     @media (min-width: 768px){
         width: 164px;
         height: 48px;
+    }
+
+    @media (min-width: 1440px){
+        width: 174px;
     }
 `;
 

@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import Logobranco from '../assets/Logobranco.png';
-import IconInicial from "./link-inicial";
-import IconEmailInicio from './link-email0';
+import IconCasa from './link-casa';
+import IconEmail from './link-email';
 
 
 export default function Header(){
     return(
         <DivLink>
             <LogoBranco src={Logobranco} alt='Logo da empresa AdoPet' />
-            <IconInicial />
-            <IconEmailInicio />
+            <IconCasa />
+            <IconEmail />
         </DivLink>
     )
 };

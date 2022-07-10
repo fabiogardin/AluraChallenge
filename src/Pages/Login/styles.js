@@ -17,7 +17,12 @@ export const ImgCabecalho = styled.img`
     @media (min-width: 768px){
         position: absolute;
         left: 0;
-        width: 70%;
+        width: 530px;
+        height: 435px;
+    }
+
+    @media (min-width: 1440px){
+        width: 630px;
         height: 435px;
     }
 `;
@@ -60,6 +65,14 @@ export const ImgPatas = styled.img`
         width: 200px;
         height: 280px;
     }
+
+    @media (min-width: 1440px){
+        width: 270px;
+        height: 380px;
+        /*transform: rotate(-15deg);
+        top: -35px;
+        right: -35px;*/
+    }
 `;
 
 export const ImgLogoAzul = styled.img`
@@ -70,6 +83,10 @@ export const ImgLogoAzul = styled.img`
         margin-top: 250px;
         width: 252px;
         height: 62px;
+    }
+
+    @media (min-width: 1440px){
+        margin-top: 140px;
     }
 `;
 
@@ -85,12 +102,20 @@ export const TitleCad = styled.h3`
         margin: 360px 80px 16px 80px;
         line-height: 30px;
     }
+
+    @media (min-width: 1440px){
+        margin: 280px 33% 16px 33%;
+    }
 `;
 
 export const AllInput = styled.div`
     @media (min-width: 768px){
         margin-top: 430px;
         margin-bottom: 30px;
+    }
+
+    @media (min-width: 1440px){
+        margin-top: 390px;
     }
 `;
 
@@ -137,6 +162,10 @@ export const Input = styled.input`
             font-size: 16px;
         }
     }
+
+    @media (min-width: 1440px){
+        width: 35%;
+    }
 `;
 
 export const IconOlho = styled.i`
@@ -148,6 +177,11 @@ export const IconOlho = styled.i`
     @media (min-width: 768px){
         left: 22%;
         bottom: 34px;
+    }
+
+    @media (min-width: 1440px){
+        left: 10%;
+        bottom: 42px;
     }
 `;
 
@@ -176,6 +210,10 @@ export const Botao = styled.a`
     padding-top: 10px;
 
     text-decoration: none;
+
+    @media (min-width: 1440px){
+        width: 174px;
+    }
 `;
 
 export const BotaoSenha = styled.a`
@@ -210,5 +248,9 @@ export const RodapeTxt = styled.p`
 
     @media (min-width: 768px){
         margin-top: 280px;
+    }
+
+    @media (min-width: 1440px){
+        margin-top: 213px;
     }
 `;

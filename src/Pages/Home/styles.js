@@ -22,6 +22,25 @@ export const ImgCabecalho = styled.img`
         height: 435px;
         z-index: 0;
     }
+
+    @media (min-width: 1440px){
+        width: 630px;
+        height: 435px;
+    }
+`;
+
+export const FormaBody = styled.img`
+    position: absolute;
+    visibility: hidden;
+
+    @media (min-width: 1440px){
+        visibility: visible;
+        width: 120px;
+        height: 664px;
+        top: 210px;
+        right: 0px;
+        left: auto;
+    }
 `;
 
 export const Body = styled.div`
@@ -39,7 +58,10 @@ export const Body = styled.div`
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 16px;
+    }
 
+    @media (min-width: 1440px){
+        margin: 310px 160px 8px 160px;
     }
 `;
 
@@ -48,12 +70,16 @@ export const TitleCad = styled.h3`
     color: #3772FF;
 
     position: absolute;
-    margin: 150px 30px 0 30px;
+    margin: 150px 15% 0 15%;
     text-align: center;
 
     @media (min-width: 768px){
         margin: 250px 120px 16px 120px;
         line-height: 30px;
+    }
+
+    @media (min-width: 1440px){
+        margin: 200px 33% 16px 33%;
     }
 `;
 
@@ -67,6 +93,11 @@ export const Cartao = styled.div`
 
     @media (min-width: 768px){
         width: 48%;
+    }
+
+    @media (min-width: 1440px){
+        width: 32%;
+        padding: 16px 24px;
     }
 `;
 
