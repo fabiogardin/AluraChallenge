@@ -32,6 +32,7 @@ import {
 } from './styles';
 
 export default function Home(){
+
     return(
         <Cabecalho>
             <FormaBody src={formaBody} />

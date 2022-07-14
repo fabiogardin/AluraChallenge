@@ -112,7 +112,7 @@ export const TitleCad = styled.h3`
     }
 `;
 
-export const AllInput = styled.div`
+export const AllInput = styled.form`
     @media screen and (min-width: 768px){
         margin-top: 430px;
         margin-bottom: 30px;
@@ -204,7 +204,7 @@ export const Botoes = styled.div`
     }
 `;
 
-export const Botao = styled.a`
+export const Botao = styled.button`
     width: 148px;
     height: 45px;
     left: 90px;
@@ -215,9 +215,6 @@ export const Botao = styled.a`
     border-radius: 6px;
     color: #FFFFFF;
     text-align: center;
-    padding-top: 10px;
-
-    text-decoration: none;
 
     :hover{
         background-color: #FF9D9E;
