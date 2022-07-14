@@ -1,5 +1,6 @@
-import { useState, useContext } from 'react';
-import { AuthContext } from '../../Contexts/auth';
+import { useState } from 'react';
+import useAuth from '../../Hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
 
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import LogoAzul from '../../assets/Logoazul.png';
@@ -29,16 +30,29 @@ import {
 
 export default function Login(){
 
-    const { authenticated, login } = useContext(AuthContext);
+    const { login } = useAuth();
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Submit", { email, password });
-        login(email, password); //integração com contexto / api
+    const handleSubmit = () => {
+        if(!email | !password){
+            setError("Preencha todos os campos");
+            return;
+        }
+
+        const res = login(email, password);
+
+        if(res){
+            setError(res);
+            return;
+        }
+
+        navigate("/home");
+        
     }
 
     return(
@@ -61,7 +75,7 @@ export default function Login(){
                         id="email"
                         name="email"
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => [setEmail(e.target.value), setError("")]}
                         placeholder='Escolha seu melhor email'
                         required
                     />
@@ -74,18 +88,17 @@ export default function Login(){
                         id="senha"
                         name="password"
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={(e) => [setPassword(e.target.value), setError("")]}
                         placeholder='Digite sua senha'
                         required
                     />
                     <IconOlho><BiHide style={{ fontSize: '25px' }} color='#999999' /></IconOlho>
                 </InputDiv>
+                <label>{error}</label>
                 <BotaoSenha href='#'>Esqueci minha senha.</BotaoSenha>
-            <Botoes>
-                <Botao type="submit" >
-                    Entrar
-                </Botao>
-            </Botoes>
+                <Botoes>
+                    <Botao Text="Entrar" type="Submit">Entrar</Botao>
+                </Botoes>
             </AllInput>
             <Rodape>
                 <RodapeTxt>

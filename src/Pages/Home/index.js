@@ -1,3 +1,6 @@
+import useAuth from '../../Hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
+
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import Dunga from '../../assets/petDunga.png';
 import Amora from '../../assets/petAmora.png';
@@ -32,6 +35,10 @@ import {
 } from './styles';
 
 export default function Home(){
+
+    //const { logout } = useAuth();
+    //const navigate = useNavigate();
+
 
     return(
         <Cabecalho>

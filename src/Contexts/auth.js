@@ -1,54 +1,76 @@
-import { useState, useEffect, createContext, useContext } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const AuthContext = createContext();
+export const AuthContext = createContext({});
 
 export const AuthProvider = ({children}) => {
 
-    const navigate = useNavigate();
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+    //const navigate = useNavigate();
+    const [user, setUser] = useState();
 
     useEffect(() => {
-        const recoveredUser = localStorage.getItem('user');
+        const userToken = localStorage.getItem("user_token");
+        const usersStorage = localStorage.getItem("users_db");
 
-        if(recoveredUser){
-            setUser(JSON.parse(recoveredUser));
+        if(userToken && usersStorage){
+            const hasUser = JSON.parse(usersStorage)?.filter(
+                (user) => user.email === JSON.parse(userToken).email
+            );
+
+            if(hasUser) setUser(hasUser[0]);
         }
-
-        setLoading(false);
 
     }, []);
 
     const login = (email, password) => {
-        //console.log('login auth', { email, password });
+        const usersStorage = JSON.parse(localStorage.getItem("users_db"));
+        const hasUser = usersStorage?.filter((user) => user.email === email);
 
-        //api criar uma session
-
-        const loggedUser = {
-            id: "123",
-            email,
+        if(hasUser?.length) {
+            if(hasUser[0].email === email && hasUser[0].password === password){
+                const token = Math.random().toString(36).substring(2);
+                localStorage.setItem("user_token", JSON.stringify({ email, token }));
+                setUser({ email, password });
+                return;
+            } else{
+                return "E-mail ou senha incorretos";
+            }
+        } else{
+            return "Usuário não cadastrado";
         }
-
-        localStorage.setItem("user", JSON.stringify(loggedUser));
-
-        if(password === 'senha123') {
-            setUser(loggedUser);
-            navigate('/home');
-        }
-
-        setUser({ id:'123', email });
+        
     };
 
+    const cadastrar = (email, password) => {
+        const usersStorage = JSON.parse(localStorage.getItem("users_db"));
+        const hasUser = usersStorage?.filter((user) => user.email === email);
+
+        if(hasUser?.length){
+            return "Já tem uma conta com esse E-mail";
+        }
+
+        let newUser;
+
+        if(usersStorage){
+            newUser = [...usersStorage, { email, password }];
+        } else{
+            newUser = [{ email, password }];
+        }
+
+        localStorage.setItem("users_db", JSON.stringify(newUser));
+
+        return;
+    }
+
+
     const logout = () => {
-        //console.log('logout');
-        localStorage.removeItem('user');
+        localStorage.removeItem("user_token");
         setUser(null);
-        navigate('/login');
+        //navigate('/login');
     };
 
     return(
-        <AuthContext.Provider value={{authenticated: !!user, user, loading, login, logout}}>
+        <AuthContext.Provider value={{ user, signed: !!user, login, cadastrar, logout}}>
             {children}
         </AuthContext.Provider>
     )

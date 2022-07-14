@@ -1,6 +1,6 @@
-import { useState, useContext } from 'react';
-import { AuthContext } from '../../Contexts/auth';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import LogoAzul from '../../assets/Logoazul.png';
@@ -28,19 +28,33 @@ import {
 } from './styles';
 
 export default function Cadastro(){
-
-    const { authenticated } = useContext(AuthContext);
-
     const navigate = useNavigate();
+    const { cadastrar } = useAuth();
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+    const [senhaC, setSenhaC] = useState("");
+    const [error, setError] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Cadastro", { email, name, senha });
-        navigate('/login')
+    const handleCadastro = () => {
+        if(!name | !email | !senha | !senhaC){
+            setError("Preencha todos os campos");
+            return;
+        } else if(senha !== senhaC){
+            setError("Senha não confere!");
+            return;
+        }
+
+        const res = cadastrar(email, senha);
+
+        if(res) {
+            setError(res);
+            return;
+        }
+
+        alert("Usuário cadastrado com sucesso!");
+        navigate("/login");
     }
 
     return(
@@ -55,7 +69,7 @@ export default function Cadastro(){
                 <ImgLogoAzul src={LogoAzul} alt='Logo da empresa AdoPet' />
                 <TitleCad>Ainda não tem cadastro? <br/>Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</TitleCad>
             </Container>
-            <AllInput onSubmit={handleSubmit}>
+            <AllInput onSubmit={handleCadastro}>
                 <InputDiv>
                     <LabelInput htmlFor="email" >Email</LabelInput>
                     <Input
@@ -63,7 +77,7 @@ export default function Cadastro(){
                         id="email"
                         name="email"
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => [setEmail(e.target.value), setError("")]}
                         placeholder='Escolha seu melhor email'
                         required
                     />
@@ -75,7 +89,7 @@ export default function Cadastro(){
                         id="nome"
                         name="nome"
                         value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={(e) => [setName(e.target.value), setError("")]}
                         placeholder='Digite seu nome completo'
                         required
                     />
@@ -88,7 +102,7 @@ export default function Cadastro(){
                         id="senha"
                         name="senha"
                         value={senha}
-                        onChange={(e) => setSenha(e.target.value)}
+                        onChange={(e) => [setSenha(e.target.value), setError("")]}
                         placeholder='Crie uma senha'
                         required
                     />
@@ -99,16 +113,18 @@ export default function Cadastro(){
                     <Input
                         primary
                         type="password"
-                        id="senha"
+                        id="senhaC"
+                        name="senhaC"
+                        value={senhaC}
+                        onChange={(e) => [setSenhaC(e.target.value), setError("")]}
                         placeholder='Repita a senha criada acima'
                         required
                     />
                     <IconOlho><BiHide style={{ fontSize: '25px', color:'#999999' }} /></IconOlho>
                 </InputDiv>
+                <label>{error}</label>
                 <Botoes>
-                    <Botao type='submit'>
-                        Cadastrar
-                    </Botao>
+                    <Botao Text='Cadastrar' type='submit'>Cadastrar</Botao>
                 </Botoes>
             </AllInput>
             <Rodape>
