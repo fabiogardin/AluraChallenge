@@ -21,6 +21,7 @@ import {
     LabelInput,
     Input,
     BotaoSenha,
+    Error,
     Botoes,
     Botao,
     Rodape,
@@ -38,7 +39,8 @@ export default function Login(){
     const [error, setError] = useState("");
 
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         if(!email | !password){
             setError("Preencha todos os campos");
             return;
@@ -76,7 +78,7 @@ export default function Login(){
                         name="email"
                         value={email}
                         onChange={(e) => [setEmail(e.target.value), setError("")]}
-                        placeholder='Escolha seu melhor email'
+                        placeholder='Digite seu email'
                         required
                     />
                 </InputDiv>
@@ -94,7 +96,7 @@ export default function Login(){
                     />
                     <IconOlho><BiHide style={{ fontSize: '25px' }} color='#999999' /></IconOlho>
                 </InputDiv>
-                <label>{error}</label>
+                <Error>{error}</Error>
                 <BotaoSenha href='#'>Esqueci minha senha.</BotaoSenha>
                 <Botoes>
                     <Botao Text="Entrar" type="Submit">Entrar</Botao>

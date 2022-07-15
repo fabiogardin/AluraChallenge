@@ -193,6 +193,13 @@ export const IconOlho = styled.i`
     }
 `;
 
+export const Error = styled.p`
+    line-height: 24px;
+    text-align: center;
+    color: #FC7071;
+    margin-bottom: 30px;
+`;
+
 export const Botoes = styled.div`
     display: flex;
     flex-direction: column;
@@ -206,6 +213,7 @@ export const Botao = styled.button`
     left: 90px;
     margin-top: 5px;
     margin-bottom: 8px;
+    border: none;
 
     background: #FC7071;
     border-radius: 6px;

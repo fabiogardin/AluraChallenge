@@ -141,7 +141,7 @@ export const Botoes = styled.div`
     }
 `;
 
-export const Botao = styled.a`
+export const Botao = styled.button`
     width: 180px;
     height: 45px;
     left: 90px;
@@ -152,9 +152,7 @@ export const Botao = styled.a`
     border-radius: 6px;
     color: #FFFFFF;
     text-align: center;
-    padding-top: 10px;
-
-    text-decoration: none;
+    border: none;
 
     :hover{
         background-color: #FF9D9E;

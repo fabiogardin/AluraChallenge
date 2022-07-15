@@ -210,6 +210,7 @@ export const Botao = styled.button`
     left: 90px;
     margin-top: 5px;
     margin-bottom: 8px;
+    border: none;
 
     background: #FC7071;
     border-radius: 6px;
@@ -241,6 +242,13 @@ export const BotaoSenha = styled.a`
     @media screen and (min-width: 768px){
         font-size: 16px;
     }
+`;
+
+export const Error = styled.p`
+    line-height: 24px;
+    text-align: center;
+    color: #FC7071;
+    margin-bottom: 30px;
 `;
 
 export const Rodape = styled.footer`

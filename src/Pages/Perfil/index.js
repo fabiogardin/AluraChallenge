@@ -57,9 +57,7 @@ export default function Mensagem(){
                     <TextArea type="text" id="sobre" rows="7" placeholder='Escreva sua mensagem' required />
                 </InputDiv>
                 <Botoes>
-                    <Botao href="#">
-                        Salvar
-                    </Botao>
+                    <form action='/perfil'><Botao type='submit'>Salvar</Botao></form>
                 </Botoes>
             </AllInput>
             <Rodape>

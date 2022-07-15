@@ -20,6 +20,7 @@ import {
     InputDiv,
     LabelInput,
     Input,
+    Error,
     Botoes,
     Botao,
     Rodape,
@@ -37,7 +38,8 @@ export default function Cadastro(){
     const [senhaC, setSenhaC] = useState("");
     const [error, setError] = useState("");
 
-    const handleCadastro = () => {
+    const handleCadastro = (e) => {
+        e.preventDefault();
         if(!name | !email | !senha | !senhaC){
             setError("Preencha todos os campos");
             return;
@@ -122,7 +124,7 @@ export default function Cadastro(){
                     />
                     <IconOlho><BiHide style={{ fontSize: '25px', color:'#999999' }} /></IconOlho>
                 </InputDiv>
-                <label>{error}</label>
+                <Error>{error}</Error>
                 <Botoes>
                     <Botao Text='Cadastrar' type='submit'>Cadastrar</Botao>
                 </Botoes>

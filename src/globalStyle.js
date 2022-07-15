@@ -11,10 +11,10 @@ export default createGlobalStyle `
     font-style: normal;
 }
 :root{
-    font-size: 16px;
+    font-size: 1rem;
 
     @media (min-width: 768px){
-        font-size: 16px;
+        font-size: 1.2rem;
     }
 }
 

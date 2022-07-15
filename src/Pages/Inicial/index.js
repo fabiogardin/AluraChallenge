@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import Logobranco from '../../assets/Logobranco.png';
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import pets from '../../assets/pets.png';
@@ -21,6 +22,8 @@ import {
  } from './styles';
 
 export default function Inicial(){
+
+    const navigate = useNavigate();
     return (
         <Cabecalho>
             <FormaBody src={formaBody} />
@@ -36,8 +39,8 @@ export default function Inicial(){
                 </Paragrafo>
             </Body>
             <Botoes>
-                <Botao href='/login' >Já tenho conta</Botao>
-                <Botao href='/cadastro' >Quero me cadastrar</Botao> 
+                <form action='/login'><Botao type='submit' >Já tenho conta</Botao></form>
+                <form action='/cadastro'><Botao type='submit'>Quero me cadastrar</Botao></form>
             </Botoes>
             <ImagemPet>
                 <Pets src={pets} alt='Imagem de dois pets' />
