@@ -1,6 +1,6 @@
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import IconAccount from '../../Components/link-user';
-import Header from '../../Components/header';
+import Header from '../../Components/header-link';
 import formaBody from '../../assets/formaBody.png'
 import {
     Cabecalho,

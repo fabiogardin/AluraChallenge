@@ -6,7 +6,7 @@ import formaCabecalho from '../../assets/formaCabecalho.png';
 import LogoAzul from '../../assets/Logoazul.png';
 import Patas from '../../assets/Patas.png';
 import formaBody from '../../assets/formaBody.png'
-import Header from '../../Components/header';
+import Header from '../../Components/header-link';
 import { BiHide, BiShow } from 'react-icons/bi';
 import {
     Cabecalho,

@@ -1,6 +1,3 @@
-import useAuth from '../../Hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
-
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import Dunga from '../../assets/petDunga.png';
 import Amora from '../../assets/petAmora.png';
@@ -12,7 +9,7 @@ import Sirius from '../../assets/petSirius.png';
 import Yoda from '../../assets/petYoda.png';
 import Zelda from '../../assets/petZelda.png';
 import formaBody from '../../assets/formaBody.png'
-import Header from '../../Components/header';
+import Header from '../../Components/header-link';
 import IconAccount from '../../Components/link-user';
 import IconContato from '../../Components/link-contato';
 import {
@@ -30,15 +27,125 @@ import {
     DadosLocal,
     DadosContato,
     Cartao,
+    Item,
     Rodape,
     RodapeTxt,
 } from './styles';
 
 export default function Home(){
 
-    //const { logout } = useAuth();
-    //const navigate = useNavigate();
+    const pets = [
+        {
+            Nome:"Dunga",
+            Imagem: require('../../assets/petDunga.png'),
+            Alt: "Imagem do cachorro Dunga",
+            Idade:"2 anos",
+            Tamanho:"Porte pequeno",
+            Detalhe:"Calmo e educado",
+            Local:"Rio de Janeiro (RJ)"
+        },
 
+        {
+            Nome:"Felicia",
+            Imagem: require('../../assets/petFelicia.png'),
+            Alt: "Imagem da gata Felicia.",
+            Idade:"6 meses",
+            Tamanho:"Porte pequeno",
+            Detalhe:"Ativa e carinhosa",
+            Local:"Nova Iguaçu (RJ)"
+        },
+        
+        {
+            Nome:"Sirius",
+            Imagem: require('../../assets/petSirius.png'),
+            Alt: "Imagem do cachorro Sirius.",
+            Idade:"6 meses",
+            Tamanho:"Porte grande",
+            Detalhe:"Ativo e educado",
+            Local:"Duque de Caxias (RJ)"
+        },
+        
+        {
+            Nome:"Fiona",
+            Imagem: require('../../assets/petFiona.png'),
+            Alt: "Imagem do cadela Fiona.",
+            Idade:"3 anos",
+            Tamanho:"Porte pequeno",
+            Detalhe:"Calma e carinhosa",
+            Local:"São Gonçalo (RJ)"
+        },
+        
+        {
+            Nome:"Sid",
+            Imagem: require('../../assets/petSid.png'),
+            Alt: "Imagem do cachorro Sid.",
+            Idade:"8 meses",
+            Tamanho:"Porte médio/grande",
+            Detalhe:"Brincalhão Amável",
+            Local:"Rio de Janeiro (RJ)"
+        },
+        
+        {
+            Nome:"Yoda",
+            Imagem: require('../../assets/petYoda.png'),
+            Alt: "Imagem do gato Yoda.",
+            Idade:"1 ano",
+            Tamanho:"Porte médio",
+            Detalhe:"Ativo e carinhoso",
+            Local:"Nova Iguaçu (RJ)"
+        },
+        
+        {
+            Nome:"Lua",
+            Imagem: require('../../assets/petLua.png'),
+            Alt: "Imagem da gata Lua.",
+            Idade:"6 meses",
+            Tamanho:"Porte médio",
+            Detalhe:"Ativa e carinhosa",
+            Local:"Duque de Caxias (RJ)"
+        },   
+        
+        {
+            Nome:"Amora",
+            Imagem: require('../../assets/petAmora.png'),
+            Alt: "Imagem da filhote Amora.",
+            Idade:"45 dias",
+            Tamanho:"Porte grande",
+            Detalhe:"Calma e carinhosa",
+            Local:"São Gonçalo (RJ)"
+        },
+        
+        {
+            Nome:"Zelda",
+            Imagem: require('../../assets/petZelda.png'),
+            Alt: "Imagem da gata Zelda",
+            Idade:"5 meses",
+            Tamanho:"Porte médio",
+            Detalhe:"Ativa e amável",
+            Local:"Rio de Janeiro (RJ)",
+        }
+    ];
+
+    const listaPets = pets.map(
+        (item, index) =>
+            (
+                <Item key={ index } >
+                    <ImgCartao src={item.Imagem} alt={item.Alt} />
+                    <DadosCartao>
+                        <TitleCartao>{item.Nome}</TitleCartao>
+                        <Lista>
+                            <DadosList>{item.Idade}</DadosList>
+                            <DadosList>{item.Tamanho}</DadosList>
+                            <DadosList>{item.Detalhe}</DadosList>
+                            <br/>
+                            <DadosLocal>{item.Local}</DadosLocal>
+                            <DadosContato>falar com responsável</DadosContato>
+                            <IconContato />
+                        </Lista>
+                    </DadosCartao>
+                </Item>
+            )
+    )
 
     return(
         <Cabecalho>
@@ -51,141 +158,7 @@ export default function Home(){
                 <TitleCad>Olá! Veja os amigos disponíveis para adoção!</TitleCad>
             </Container>
             <Body>
-                <Cartao>
-                    <ImgCartao src={Dunga} alt='Imagem do cachorro Dunga.' />
-                    <DadosCartao>
-                        <TitleCartao>Dunga</TitleCartao>
-                        <Lista>
-                            <DadosList>2 anos</DadosList>
-                            <DadosList>Porte pequeno</DadosList>
-                            <DadosList>Calmo e educado</DadosList>
-                            <br/>
-                            <DadosLocal>Rio de Janeiro (RJ)</DadosLocal>
-                            <DadosContato>falar com responsável</DadosContato>
-                            <IconContato />
-                        </Lista>
-                    </DadosCartao>
-                </Cartao>
-                <Cartao>
-                    <ImgCartao src={Felicia} alt='Imagem da gata Felicia.' />
-                    <DadosCartao>
-                        <TitleCartao>Felícia</TitleCartao>
-                        <Lista>
-                            <DadosList>6 meses</DadosList>
-                            <DadosList>Porte pequeno</DadosList>
-                            <DadosList>Ativa e carinhosa</DadosList>
-                            <br/>
-                            <DadosLocal>Nova Iguaçu (RJ)</DadosLocal>
-                            <DadosContato>falar com responsável</DadosContato>
-                            <IconContato />
-                        </Lista>
-                    </DadosCartao>
-                </Cartao>
-                <Cartao>
-                    <ImgCartao src={Sirius} alt='Imagem do cachorro Sirius.' />
-                    <DadosCartao>
-                        <TitleCartao>Sirius</TitleCartao>
-                        <Lista>
-                            <DadosList>6 meses</DadosList>
-                            <DadosList>Porte grande</DadosList>
-                            <DadosList>Ativo e educado</DadosList>
-                            <br/>
-                            <DadosLocal>Duque de Caxias (RJ)</DadosLocal>
-                            <DadosContato>falar com responsável</DadosContato>
-                            <IconContato />
-                        </Lista>
-                    </DadosCartao>
-                </Cartao>
-                <Cartao>
-                    <ImgCartao src={Fiona} alt='Imagem do cadela Fiona.' />
-                    <DadosCartao>
-                        <TitleCartao>Fiona</TitleCartao>
-                        <Lista>
-                            <DadosList>3 anos</DadosList>
-                            <DadosList>Porte pequeno</DadosList>
-                            <DadosList>Calma e carinhosa</DadosList>
-                            <br/>
-                            <DadosLocal>São Gonçalo (RJ)</DadosLocal>
-                            <DadosContato>falar com responsável</DadosContato>
-                            <IconContato />
-                        </Lista>
-                    </DadosCartao>
-                </Cartao>
-                <Cartao>
-                    <ImgCartao src={Sid} alt='Imagem do cachorro Sid.' />
-                    <DadosCartao>
-                        <TitleCartao>Sid</TitleCartao>
-                        <Lista>
-                            <DadosList>8 meses</DadosList>
-                            <DadosList>Porte médio/grande</DadosList>
-                            <DadosList>Brincalhão e amável</DadosList>
-                            <br/>
-                            <DadosLocal>Rio de Janeiro (RJ)</DadosLocal>
-                            <DadosContato>falar com responsável</DadosContato>
-                            <IconContato />
-                        </Lista>
-                    </DadosCartao>
-                </Cartao>
-                <Cartao>
-                    <ImgCartao src={Yoda} alt='Imagem do gato Yoda.' />
-                    <DadosCartao>
-                        <TitleCartao>Yoda</TitleCartao>
-                        <Lista>
-                            <DadosList>1 ano</DadosList>
-                            <DadosList>Porte médio</DadosList>
-                            <DadosList>Ativo e carinhoso</DadosList>
-                            <br/>
-                            <DadosLocal>Nova Iguaçu (RJ)</DadosLocal>
-                            <DadosContato>falar com responsável</DadosContato>
-                            <IconContato />
-                        </Lista>
-                    </DadosCartao>
-                </Cartao>
-                <Cartao>
-                    <ImgCartao src={Lua} alt='Imagem da gata Lua.' />
-                    <DadosCartao>
-                        <TitleCartao>Lua</TitleCartao>
-                        <Lista>
-                            <DadosList>6 meses</DadosList>
-                            <DadosList>Porte médio</DadosList>
-                            <DadosList>Ativa e carinhosa</DadosList>
-                            <br/>
-                            <DadosLocal>Duque de Caxias (RJ)</DadosLocal>
-                            <DadosContato>falar com responsável</DadosContato>
-                            <IconContato />
-                        </Lista>
-                    </DadosCartao>
-                </Cartao>
-                <Cartao>
-                    <ImgCartao src={Amora} alt='Imagem da filhote Amora.' />
-                    <DadosCartao>
-                        <TitleCartao>Amora</TitleCartao>
-                        <Lista>
-                            <DadosList>45 dias</DadosList>
-                            <DadosList>Porte grande</DadosList>
-                            <DadosList>Calma e carinhosa</DadosList>
-                            <br/>
-                            <DadosLocal>São Gonçalo (RJ)</DadosLocal>
-                            <DadosContato>falar com responsável</DadosContato>
-                            <IconContato />
-                        </Lista>
-                    </DadosCartao>
-                </Cartao>
-                <Cartao>
-                    <ImgCartao src={Zelda} alt='Imagem da gata Zelda.' />
-                    <DadosCartao>
-                        <TitleCartao>Zelda</TitleCartao>
-                        <Lista>
-                            <DadosList>5 meses</DadosList>
-                            <DadosList>Porte médio</DadosList>
-                            <DadosList>Ativa e amável</DadosList>
-                            <br/>
-                            <DadosLocal>Rio de Janeiro (RJ)</DadosLocal>
-                            <DadosContato>falar com responsável</DadosContato>
-                            <IconContato />
-                        </Lista>
-                    </DadosCartao>
-                </Cartao>
+                {listaPets}
             </Body>            
             <Rodape>
                 <RodapeTxt>

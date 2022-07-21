@@ -28,8 +28,8 @@ export default function Rotas(){
             <Route path="/home" element={<Private Item={Home} />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/mensagem" element={<Mensagem />} />
-            <Route path="/perfil" element={<Perfil />} />
+            <Route path="/mensagem" element={<Private Item={Mensagem} />} />
+            <Route path="/perfil" element={<Private Item={Perfil} />} />
           </Routes>
         </Fragment>
       </AuthProvider>

@@ -43,7 +43,7 @@ export const FormaBody = styled.img`
     }
 `;
 
-export const Body = styled.div`
+export const Body = styled.ul`
     display: flex;
     position: relative;
     top: -50px;
@@ -51,6 +51,7 @@ export const Body = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    list-style-type: none;
 
     @media (min-width: 768px){
         margin: 400px 30px -20px 30px;
@@ -83,7 +84,7 @@ export const TitleCad = styled.h3`
     }
 `;
 
-export const Cartao = styled.div`
+export const Item = styled.li`
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -97,6 +98,24 @@ export const Cartao = styled.div`
 
     @media screen and (min-width: 1440px){
         width: 32%;
+        padding: 16px 24px;
+    }
+`;  
+
+export const Cartao = styled.div`
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background: #F7F7F7;
+    align-items: center;
+    padding: 24px;
+
+    @media screen and (min-width: 768px){
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1440px){
+        width: 100%;
         padding: 16px 24px;
     }
 `;
@@ -113,6 +132,7 @@ export const Lista = styled.ul`
 
 export const DadosCartao = styled.div`
     width: 50%;
+    max-width: 180px;
 
 `;
 

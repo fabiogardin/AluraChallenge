@@ -3,7 +3,7 @@ import Logobranco from '../../assets/Logobranco.png';
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import pets from '../../assets/pets.png';
 import formaBody from '../../assets/formaBody.png';
-import Header from '../../Components/header';
+import Header from '../../Components/header-link';
 import {
     Cabecalho,
     FormaBody,
