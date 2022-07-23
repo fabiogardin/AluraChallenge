@@ -102,24 +102,6 @@ export const Item = styled.li`
     }
 `;  
 
-export const Cartao = styled.div`
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    background: #F7F7F7;
-    align-items: center;
-    padding: 24px;
-
-    @media screen and (min-width: 768px){
-        width: 100%;
-    }
-
-    @media screen and (min-width: 1440px){
-        width: 100%;
-        padding: 16px 24px;
-    }
-`;
-
 export const ImgCartao = styled.img`
     width: 148px;
     height: 148px;

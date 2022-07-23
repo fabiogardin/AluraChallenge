@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "adotars",
+  "info": {
+    "singularName": "adotar",
+    "pluralName": "adotars",
+    "displayName": "Adotar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "imagem": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "idade": {
+      "type": "string",
+      "required": true
+    },
+    "tamanho": {
+      "type": "string",
+      "required": true
+    },
+    "detalhe": {
+      "type": "richtext",
+      "required": true
+    },
+    "local": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

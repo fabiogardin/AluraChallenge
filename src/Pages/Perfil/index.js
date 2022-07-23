@@ -44,16 +44,16 @@ export default function Mensagem(){
                     <EditarFoto href='#'>Clique na foto para editar</EditarFoto>
                 </Perfil>
                 <InputDiv>
-                    <LabelInput for="nome" >Nome</LabelInput>
+                    <LabelInput htmlFor="nome" >Nome</LabelInput>
                     <Input type="text" id="nome" placeholder='Insira seu nome completo' required />
 
-                    <LabelInput for="telefone" >Telefone</LabelInput>
+                    <LabelInput htmlFor="telefone" >Telefone</LabelInput>
                     <Input type="tel" id="telefone" placeholder='Insira seu telefone e/ou whatsapp' required />
 
-                    <LabelInput for="cidade" >Cidade</LabelInput>
+                    <LabelInput htmlFor="cidade" >Cidade</LabelInput>
                     <Input type="text" id="cidade" placeholder='Por qual animal você se interessou?' required />
 
-                    <LabelInput for="sobre" >Sobre</LabelInput>
+                    <LabelInput htmlFor="sobre" >Sobre</LabelInput>
                     <TextArea type="text" id="sobre" rows="7" placeholder='Escreva sua mensagem' required />
                 </InputDiv>
                 <Botoes>
