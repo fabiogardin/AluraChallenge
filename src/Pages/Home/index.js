@@ -43,7 +43,7 @@ export default function Home(){
         (item) =>
             (
                 <Item key={ item?.id } >
-                    <ImgCartao src={ `http://192.168.1.242:1337${item?.attributes?.imagem?.data?.attributes?.url}` } />
+                    <ImgCartao src={ `http://localhost:1337${item?.attributes?.imagem?.data?.attributes?.url}` } />
                     <DadosCartao>
                         <TitleCartao>{item?.attributes?.nome}</TitleCartao>
                         <Lista>
