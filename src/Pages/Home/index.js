@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import api from '../../Services/api';
-
 import formaCabecalho from '../../assets/formaCabecalho.png';
 import formaBody from '../../assets/formaBody.png'
 import Header from '../../Components/header-link';
